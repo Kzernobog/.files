@@ -1,8 +1,27 @@
 set nocompatible		" required
 filetype off			" required
 
-nnoremap <C-Left> :tabprevious<C-R>
-nnoremap <C-Right> :tabnext<C-R>
+" automatic reloading of vimrc
+autocmd! bufwritepost .vimrc source %
+
+" better copy and paste
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+" better use of mouse
+set mouse=a
+
+" setting the mapleader to be a spacebar
+map <space> <leader>
+
+" working with tabs
+nnoremap <leader>, <esc>:tabprevious<CR>
+nnoremap <leader>. <esc>:tabnext<CR>
+nnoremap <leader>n <esc>:tabnew<space>
+nnoremap <leader>x <esc>:tabclose<CR>
+
+" working with splits and windows
+
 
 " specify how screens are supposed to be split
 set splitbelow
@@ -11,7 +30,7 @@ set splitright
 " code folding - folds a function/class - with a spacebar
 set foldmethod=indent
 set foldlevel=99
-nnoremap <space> za
+nnoremap <leader>f za
 
 " Enables line numbering
 set nu
