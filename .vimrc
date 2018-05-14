@@ -14,13 +14,22 @@ set mouse=a
 " setting the mapleader to be a spacebar
 map <space> <leader>
 
+" quicksave
+noremap <C-Z> :update<CR>
+
 " working with tabs
 nnoremap <leader>, <esc>:tabprevious<CR>
 nnoremap <leader>. <esc>:tabnext<CR>
-nnoremap <leader>n <esc>:tabnew<space>
+nnoremap <leader>nt <esc>:tabnew<space>
 nnoremap <leader>x <esc>:tabclose<CR>
 
 " working with splits and windows
+map <leader>h <c-w>h
+map <leader>j <c-w>j
+map <leader>k <c-w>k
+map <leader>l <c-w>l
+nnoremap <leader>v <esc>:vs<space>
+nnoremap <leader>s <esc>:sp<space> 
 
 
 " specify how screens are supposed to be split
