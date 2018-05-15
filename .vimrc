@@ -9,13 +9,13 @@ set pastetoggle=<F2>
 set clipboard=unnamed
 
 " better use of mouse
-set mouse=a
+" set mouse=a
 
 " setting the mapleader to be a spacebar
 map <space> <leader>
 
 " quicksave
-noremap <C-Z> :update<CR>
+nnoremap <leader>s <esc>:update<CR>
 
 " working with tabs
 nnoremap <leader>, <esc>:tabprevious<CR>
@@ -29,7 +29,7 @@ map <leader>j <c-w>j
 map <leader>k <c-w>k
 map <leader>l <c-w>l
 nnoremap <leader>v <esc>:vs<space>
-nnoremap <leader>s <esc>:sp<space> 
+nnoremap <leader>sp <esc>:sp<space> 
 
 
 " specify how screens are supposed to be split
@@ -95,6 +95,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Shougo/vimshell'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
@@ -107,6 +108,12 @@ filetype plugin indent on    " required
 " Colorscheme
 set background=dark
 colors zenburn
+
+" powerline status
+set laststatus=2
+
+" insert break point for ipdb
+map <leader>b Oipdb.set_trace() # BREAKPOINT<C-c> 
 
 
 
