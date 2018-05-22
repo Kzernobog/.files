@@ -87,15 +87,15 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'Shougo/vimshell'
 Plugin 'Shougo/vimproc.vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes' " colorscheme
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
@@ -107,13 +107,33 @@ filetype plugin indent on    " required
 
 " Colorscheme
 set background=dark
-colors zenburn
+colors gruvbox 
+"colors onedark
+"colors anderson
+"colors iceberg
 
 " powerline status
 set laststatus=2
 
+" airline
+let g:airline_theme='base16'
+let g:airline_powerline_fonts = 1
+set t_Co=256
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" debuggin related shortcuts
 " insert break point for ipdb
 map <leader>b Oipdb.set_trace() # BREAKPOINT<C-c> 
+" insert debugging print statement
+map <leader>print Oprint("") # DEBUGGING PRINT<C-c>
 
+" YouCompleMe shortcuts
+nnoremap <leader>def <esc>:YcmCompleter GoToDefinition<CR>
+nnoremap <leader>dec <esc>:YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>d <esc>:YcmCompleter GoTo<CR> 
 
-
+" NerdTree shortcuts
+nnoremap <S-f> <esc>:NERDTreeTabsOpen<CR>
