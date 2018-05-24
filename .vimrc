@@ -126,7 +126,7 @@ endif
 
 " debuggin related shortcuts
 " insert break point for ipdb
-map <leader>b Oipdb.set_trace() # BREAKPOINT<C-c> 
+map <leader>b Opdb.set_trace() # BREAKPOINT<C-c> 
 " insert debugging print statement
 map <leader>print Oprint("") # DEBUGGING PRINT<C-c>
 
