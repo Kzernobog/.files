@@ -116,7 +116,7 @@ colors gruvbox
 set laststatus=2
 
 " airline
-let g:airline_theme='base16'
+let g:airline_theme='deus'
 let g:airline_powerline_fonts = 1
 set t_Co=256
 
@@ -136,4 +136,10 @@ nnoremap <leader>dec <esc>:YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>d <esc>:YcmCompleter GoTo<CR> 
 
 " NerdTree shortcuts
-nnoremap <S-f> <esc>:NERDTreeTabsOpen<CR>
+nnoremap <F6> <esc>:NERDTree<CR>
+
+" terminal shortcuts
+nnoremap <F5> <esc>:terminal++rows=10<CR> 
+nnoremap <leader>gs <esc>:vertical terminal ++open git status<CR> 
+nnoremap <leader>size <esc>:resize 10<CR>
+tnoremap <F5> <C-W>N
