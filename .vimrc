@@ -136,7 +136,7 @@ nnoremap <leader>dec <esc>:YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>d <esc>:YcmCompleter GoTo<CR> 
 
 " NerdTree shortcuts
-nnoremap <F6> <esc>:NERDTree<CR>
+nnoremap <F6> <esc>:NERDTreeToggle<CR>
 
 " terminal shortcuts
 nnoremap <F5> <esc>:terminal++rows=10<CR> 
