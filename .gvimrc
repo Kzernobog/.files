@@ -6,7 +6,7 @@ filetype off			" required
 autocmd! bufwritepost .gvimrc source %
 
 " no error bells
-set noeb vb t_vb=
+set vb t_vb=
 
 " better copy and paste
 set pastetoggle=<F2>
@@ -66,7 +66,6 @@ inoremap [ []<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
-
 
 " specify how screens are supposed to be split
 set splitbelow
@@ -158,7 +157,7 @@ colors gruvbox
 "colors onedark
 "colors anderson
 "colors iceberg
-
+"
 " ultisnips related mappings
 let g:UltiSnipsExpandTrigger="<c-a>"
 let g:UltiSnipsListSnippets="<c-tab>"
@@ -168,10 +167,11 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:ultisnips_python_style = "google"
 
+
 " Indentation coloring related variables
-let g:indent_guides_enabel_on_vim_startup = 1
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size=1
+let g:indent_guides_start_level=2
 
 " powerline status
 set laststatus=2
@@ -183,6 +183,8 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 set t_Co=256
 
+" control p
+let g:ctrlp_show_hidden = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
