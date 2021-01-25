@@ -36,7 +36,7 @@ function! VimTodoListsCustomMappings()
 	nnoremap <buffer> <Tab> : VimTodoListsIncreaseIndent<CR>
 	nnoremap <buffer> <S-Tab> : VimTodoListsDecreaseIndent<CR>
 	inoremap <buffer> <Tab> <Esc>: VimTodoListsIncreaseIndent<CR>A
-	inoremap <buffer> <S-Tab> <Esc> VimTodoListsDecreaseIndent<CR>A
+	inoremap <buffer> <S-Tab> <Esc>: VimTodoListsDecreaseIndent<CR>A
 endfunction
 let g:VimTodoListsMoveItems = 0
 let g:VimTodoListsDatesEnabled = 1
@@ -124,6 +124,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+" Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'gmarik/Vundle.vim'
@@ -203,6 +204,15 @@ nnoremap <F6> <esc>:NERDTreeToggle<CR>
 
 " terminal shortcuts
 nnoremap <F5> <esc>:terminal++rows=10<CR> 
-nnoremap <leader>gs <esc>:vertical terminal ++open git status<CR> 
 nnoremap <leader>size <esc>:resize 10<CR>
 tnoremap <F5> <C-W>N
+
+" git shortcuts
+nnoremap <leader>gs <esc>:G<CR> 
+nmap <leader>g. <esc>:diffget //3<CR>
+nmap <leader>g, <esc>:diffget //2<CR>
+
+" vim markdown shortcuts
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=2
